@@ -2,45 +2,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GDCommunity</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #101426;
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 55px 20px;
-      background: linear-gradient(135deg, #5425b8, #087fbd);
-    }
-    h1 { font-size: 42px; margin: 0; }
-    main { padding: 35px 20px; }
-    .card {
-      max-width: 500px;
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 15px;
-      background: #202943;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GDCommunity - Fases Famosas</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101426;color:white;font-family:Arial,sans-serif}
+header{padding:30px 18px;background:linear-gradient(120deg,#5425b8,#087fbd)}
+header h1{margin:0;font-size:32px}
+main{max-width:950px;margin:auto;padding:22px}
+h2{color:#b99aff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:#202943;border:1px solid #35446a;border-radius:14px;padding:20px}
+.card h3{margin-top:0}
+.id{color:#9db4ff;font-size:13px;overflow-wrap:anywhere}
+.tag{display:inline-block;background:#5536a5;padding:6px 10px;border-radius:20px;font-size:12px}
+button{background:#7651e8;color:white;border:0;padding:11px 15px;border-radius:8px;font-weight:bold;cursor:pointer}
+button:active{transform:scale(.97)}
+footer{text-align:center;color:#9ca9c9;padding:30px}
+</style>
 </head>
 <body>
-  <header>
-    <h1>GDCommunity</h1>
-    <p>A comunidade brasileira de Geometry Dash!</p>
-  </header>
-
-  <main>
-    <div class="card">
-      <h2>Bem-vindo!</h2>
-      <p>Nosso espaço para jogadores, criadores de fases e fãs de Geometry Dash.</p>
-      <p>Estamos começando!</p>
-    </div>
-  </main>
+<header>
+<h1>GDCommunity</h1>
+<p>A comunidade brasileira de Geometry Dash</p>
+</header>
+<main>
+<h2>⭐ Fases Famosas</h2>
+<div class="grid">
+<div class="card">
+<h3>Tidal Wave</h3>
+<span class="tag">Extreme Demon</span>
+<p>Criador: OniLink</p>
+<p class="id">ID: 86407629</p>
+<button onclick="copyId('86407629')">Copiar ID</button>
+</div>
+<div class="card">
+<h3>Skeletal Shenanigans</h3>
+<span class="tag">Medium Demon</span>
+<p>Criadores: YoReid e Airz</p>
+<p class="id">ID: 118509879</p>
+<button onclick="copyId('118509879')">Copiar ID</button>
+</div>
+<div class="card">
+<h3>iSpyWithMyLittleEye</h3>
+<span class="tag">Easy Demon</span>
+<p>Criador: Voxicat</p>
+<p class="id">ID: 89886591</p>
+<button onclick="copyId('89886591')">Copiar ID</button>
+</div>
+</div>
+</main>
+<footer>GDCommunity • Comunidade feita por jogadores</footer>
+<script>
+function copyId(id){
+navigator.clipboard.writeText(id).then(()=>{
+alert("ID copiado: "+id);
+}).catch(()=>{
+alert("ID da fase: "+id);
+});
+}
+</script>
 </body>
 </html>
